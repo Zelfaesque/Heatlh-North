@@ -1,0 +1,31 @@
+//MO001-002.TXT ANA00001 TO ANA00002
+médecin		TAR	292	nouvelle taille enregistrement : 292
+médecin	nom	RUB+		nom est une nouvelle rubrique
+médecin	prenom	RUB+		prenom est une nouvelle rubrique
+médecin	email	RUB+		email est une nouvelle clé
+médecin	IDclinique	RUB+		IDclinique est une nouvelle clé
+statut		NNF*	option	nouveau nom statut
+statut	IDstatut	NNR	IDoption	ATTENTION : la clé IDoption a pour nouveau nom IDstatut
+prescription		TAR	186	nouvelle taille enregistrement : 186
+prescription	dosage	NNR	ordonnancement	ATTENTION : la rubrique ordonnancement a pour nouveau nom dosage
+prescription	frequence	RUB+		frequence est une nouvelle rubrique
+prescription	durée	RUB+		durée est une nouvelle rubrique
+prescription	IDmédicament	RUB+		IDmédicament est une nouvelle clé
+prescription	IDordonnance	RUB+		IDordonnance est une nouvelle clé
+prescription	médicament	RUB-		la rubrique médicament est supprimée
+prescription	alarme	RUB-		la rubrique alarme est supprimée
+réservation		TAR	43	nouvelle taille enregistrement : 43
+réservation	IDchambre	RUB-		la rubrique IDchambre est supprimée
+médicament		NFI		nouveau fichier de données
+ordonnance		NFI		nouveau fichier de données
+clinique		NFI		nouveau fichier de données
+dossier		FIC-	dossier	Fichier de données supprimé dossier
+chambre		FIC-	chambre	Fichier de données supprimé chambre
+Contrainte_patient_ordonnance		NWL	patient (IDpatient) et ordonnance (IDpatient)	Nouvelle liaison entre les fichiers de données patient (IDpatient) et ordonnance (IDpatient)
+Contrainte_ordonnance_prescription		NWL	ordonnance (IDordonnance) et prescription (IDordonnance)	Nouvelle liaison entre les fichiers de données ordonnance (IDordonnance) et prescription (IDordonnance)
+Contrainte_médicament_prescription		NWL	médicament (IDmédicament) et prescription (IDmédicament)	Nouvelle liaison entre les fichiers de données médicament (IDmédicament) et prescription (IDmédicament)
+Contrainte_médecin_ordonnance		NWL	médecin (IDmédecin) et ordonnance (IDmédecin)	Nouvelle liaison entre les fichiers de données médecin (IDmédecin) et ordonnance (IDmédecin)
+Contrainte_clinique_médecin		NWL	clinique (IDclinique) et médecin (IDclinique)	Nouvelle liaison entre les fichiers de données clinique (IDclinique) et médecin (IDclinique)
+Contrainte_patient_dossier		DEL	patient (IDpatient) et dossier (IDpatient)	Liaison supprimée entre les fichiers de données patient (IDpatient) et dossier (IDpatient)
+Contrainte_prescription_dossier		DEL	prescription (IDprescription) et dossier (IDprescription)	Liaison supprimée entre les fichiers de données prescription (IDprescription) et dossier (IDprescription)
+Contrainte_chambre_réservation		DEL	chambre (IDchambre) et réservation (IDchambre)	Liaison supprimée entre les fichiers de données chambre (IDchambre) et réservation (IDchambre)
